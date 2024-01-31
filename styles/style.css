@@ -187,7 +187,7 @@
 .content__text {
   font-size: 18px;
   font-variation-settings: "wght" var(--text-font-weight);
-  line-height: 21px; /* 116.667% */
+  line-height: 21px;
   margin-inline: 25px;
 }
 
@@ -220,12 +220,25 @@
   font-size: 14px;
   font-weight: 400;
   opacity: 0.5;
-  inset-inline-end: 25px; 
-  inset-block-start: 27px; 
+  inset-inline-end: 25px;
+  inset-block-start: 27px;
   text-shadow: 1px 1px var(--lable-shadow), -1px -1px var(--lable-shadow),
     -1px 1px var(--lable-shadow), 1px -1px var(--lable-shadow);
-    text-transform: uppercase;    
+  text-transform: uppercase;
 }
+
+@supports (
+  (text-stroke: 1px var(--lable-shadow)) or
+    (-webkit-text-stroke: 1px var(--lable-shadow))
+) {
+  .lable {
+    -webkit-text-stroke: 1px var(--lable-shadow);
+    text-stroke: 1px var(--lable-shadow);
+    text-shadow: none;
+  }
+}
+
+/*Button & like*/
 
 .button__text {
   position: relative;
@@ -334,6 +347,8 @@
   margin-right: 8px;
 }
 
+/*Dialog*/
+
 .dialog {
   font-family: var(--accent-font);
   font-size: 14px;
@@ -373,17 +388,18 @@
 
 .dialog__close {
   text-transform: uppercase;
-
   inline-size: 100%;
   justify-content: center;
   padding-block-start: 12.5px;
   padding-block-end: 12.5px;
 }
 
+/*Media*/
+
 @media (width <= 376px) {
   .lable {
-    inset-inline-end: 11px; 
-    inset-block-start: 25px; 
+    inset-inline-end: 11px;
+    inset-block-start: 25px;
   }
 
   .content__title {
@@ -402,4 +418,3 @@
     min-block-size: 29px;
   }
 }
-
