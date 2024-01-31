@@ -4,3 +4,56 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+  --background-color: #000;
+  --accent-color: #00cc14;
+  --color-sparks: #ff0000;
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
+  --background-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
+  --title-font-weight: 785;
+  --text-font-weight: 465;
+  --text-shadow: var(--accent-color);
+  --lable-shadow: var(--background-color);
+  --border-color: var(--accent-color);
+  --heart-border: var(--accent-color);
+}
+
+:root.theme-light {
+  --background-color: #fff;
+  --accent-color: #000;
+  --color-sparks: #ff0000;
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
+  --background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+  --title-font-weight: 700;
+  --text-font-weight: 400;
+  --text-shadow: var(--accent-color);
+  --lable-shadow: var(--background-color);
+  --border-color: var(--accent-color);
+  --heart-border: var(--accent-color);
+} 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fff;
+    --accent-color: #000;
+    --color-sparks: #ff0000;
+    --main-font: "Inter-Variable", sans-serif;
+    --accent-font: "PressStart2P", fantasy;
+    --background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+    --title-font-weight: 700;
+    --text-font-weight: 400;
+    --text-shadow: var(--accent-color);
+    --lable-shadow: var(--background-color);
+    --border-color: var(--accent-color);
+    --heart-border: var(--accent-color);
+  }
+}
