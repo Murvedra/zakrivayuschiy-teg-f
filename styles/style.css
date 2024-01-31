@@ -17,8 +17,8 @@
 /*Photo Filters*/
 
 .grayscale {
-  -webkit-filter: grayscale(50%),  blur(3px);
-  filter: grayscale(50%),  blur(3px);
+  -webkit-filter: grayscale(50%), blur(20px);
+  filter: grayscale(50%), blur(20px);
 }
 
 .hue-rotate {
@@ -31,9 +31,8 @@
   filter: saturate(360%);
 }
 
-.invert {
-  -webkit-filter: invert(80%);
-  filter: invert(80%);
+.filters {
+  filter: saturate(150%) hue-rotate(90deg) grayscale(10%) invert(15%) blur(1px);
 } 
 
 .sepia {
