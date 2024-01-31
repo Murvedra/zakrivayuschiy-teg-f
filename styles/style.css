@@ -382,7 +382,6 @@
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-  backdrop-filter: blur(3px);
 }
 
 .dialog__close {
@@ -409,7 +408,8 @@
   .button__footer {
     flex-direction: column;
     inline-size: 310px;
-    block-size: 84px;
+    min-width: 84px;
+    min-height: 80px;
   }
 
   .footer__icon {
