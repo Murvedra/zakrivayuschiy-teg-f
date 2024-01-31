@@ -14,7 +14,6 @@
 
 */
 
-
 /*Photo Filters*/
 
 .grayscale {
@@ -347,7 +346,7 @@
   margin-right: 8px;
 }
 
-/*Dialog*/
+/*DIALOG*/
 
 .dialog {
   font-family: var(--accent-font);
