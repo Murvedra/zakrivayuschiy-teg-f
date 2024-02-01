@@ -299,10 +299,9 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  outline: none;
-  border: 2px solid transparent;
-  box-sizing: border-box;
-  transition: border 0.3s ease;
+  width: 38px;
+  height: 34px;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -310,15 +309,11 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
 }
 
 .like-icon {
-  inline-size: 38px;
-  block-size: 34px;
   transform-origin: center;
-  border: none;
-  outline: none;
 }
 
 .button__footer {
