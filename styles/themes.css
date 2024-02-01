@@ -19,7 +19,9 @@
   --text-shadow: var(--accent-color);
   --lable-shadow: var(--background-color);
   --border-color: var(--accent-color);
+  --text-color: var(--accent-color);
   --heart-border: var(--accent-color);
+  --floppy: var(--accent-color);
 }
 
 :root.theme-light {
@@ -33,10 +35,12 @@
     linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
   --title-font-weight: 700;
   --text-font-weight: 400;
-  --text-shadow: var(--accent-color);
+  --text-shadow: var(--background-color);
   --lable-shadow: var(--background-color);
+  --text-color: var(--accent-color);
   --border-color: var(--accent-color);
   --heart-border: var(--accent-color);
+  --floppy: var(--background-color);
 } 
 
 @media (prefers-color-scheme: light) {
@@ -51,9 +55,11 @@
       linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
     --title-font-weight: 700;
     --text-font-weight: 400;
-    --text-shadow: var(--accent-color);
+    --text-shadow: var(--background-color);
     --lable-shadow: var(--background-color);
     --border-color: var(--accent-color);
+    --text-color: var(--accent-color);
     --heart-border: var(--accent-color);
+    --floppy: var(--background-color);
   }
 }

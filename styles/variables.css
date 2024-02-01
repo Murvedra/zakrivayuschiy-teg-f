@@ -15,5 +15,7 @@
   --text-shadow: var(--accent-color);
   --lable-shadow: var(--background-color);
   --border-color: var(--accent-color);
+  --text-color: var(--accent-color);
   --heart-border: var(--accent-color);
+  --floppy: var(--accent-color);
 }

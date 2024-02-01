@@ -60,7 +60,7 @@
   align-items: center;
   background: var(--background-color);
   font-family: var(--main-font, sans-serif);
-  color: var(--accent-color);
+  color: var(--text-color);
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
@@ -115,7 +115,6 @@
   background-color: transparent;
   cursor: pointer;
   text-transform: uppercase;
-
   position: relative;
   margin-inline-start: 17px;
   transition: 0.3s ease;
@@ -151,7 +150,7 @@
   width: 0%;
   height: 2px;
   margin-top: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--text-color);
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -225,23 +224,14 @@
   text-transform: uppercase;
 }
 
-@supports (
-  (text-stroke: 1px var(--lable-shadow)) or
-    (-webkit-text-stroke: 1px var(--lable-shadow))
-) {
-  .lable {
-    -webkit-text-stroke: 1px var(--lable-shadow);
-    text-stroke: 1px var(--lable-shadow);
-    text-shadow: none;
-  }
-}
-
 /*Button & like*/
 
 .button__text {
   position: relative;
-  color: var(--accent-color, #00cc14);
+  mix-blend-mode: difference;
+  color: var(--text-shadow);
   z-index: 1;
+
 }
 
 .button {
@@ -266,7 +256,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--accent-color);
+  background: var(--text-color);
   z-index: 1;
   transition: width 0.5s ease-in-out;
 }
@@ -307,10 +297,12 @@
 .card__icon-button {
   display: grid;
   background: transparent;
-  border: 2px solid transparent;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.3s ease;
   padding: 0;
+  outline: none;
+  border: 2px solid transparent;
+  box-sizing: border-box;
 }
 
 .card__icon-button:focus {
@@ -318,13 +310,16 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
+  border-color: var(--accent-color);
+  transition: border 0.3s ease;
 }
 
 .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  inline-size: 38px;
+  block-size: 34px;
   transform-origin: center;
+  border: none;
+  outline: none;
 }
 
 .button__footer {
@@ -340,10 +335,23 @@
 }
 
 .floppy {
+  color: var(--floppy);
   width: 21px;
   height: 21px;
   margin-right: 8px;
 }
+
+.footer__floppy {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.dialog__icon {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
 
 /*DIALOG*/
 
@@ -358,12 +366,6 @@
   text-transform: uppercase;
   padding: 30px;
   inline-size: clamp(341px, 335.3662px + 1.5023vw, 357px);
-}
-
-.dialog__icon {
-  inline-size: 39px;
-  block-size: 39px;
-  flex-shrink: 0;
 }
 
 .dialog[open] {
@@ -414,5 +416,16 @@
   .footer__icon {
     inline-size: 29px;
     min-block-size: 29px;
+  }
+}
+
+@supports (
+  (text-stroke: 1px var(--lable-shadow)) or
+    (-webkit-text-stroke: 1px var(--lable-shadow))
+) {
+  .lable {
+    -webkit-text-stroke: 1px var(--lable-shadow);
+    text-stroke: 1px var(--lable-shadow);
+    text-shadow: none;
   }
 }
